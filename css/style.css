@@ -203,10 +203,9 @@ p {
 }
 
 .service {
-  background: url(../images/resource-tights.svg), var(--meat-2);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
+  background: url(../images/resource-tights.png), url(../images/background-meat.jpg);
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
   padding-top: 5rem;
 }
 
@@ -417,7 +416,7 @@ p {
 }
 
 .about {
-  background-image: url(../images/resource-guitar.svg);
+  background-image: url(../images/resource-guitar.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 42vw;
@@ -557,9 +556,9 @@ p {
 }
 
 .reviews {
-  background: url(../images/resource-maracas.svg), var(--wood-2);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url(../images/resource-maracas.png), url(../images/background-wood.jpg);;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
   background-position-x: right;
   background-position-y: center;
 }
@@ -610,10 +609,6 @@ p {
 .reviews .box-container .box .stars i {
   font-size: 1.7rem;
   color:  var(--sunset-2);
-}
-
-.contact {
-  /* background-color: var(--sunset-3); */
 }
 
 .contact .row {
@@ -1100,6 +1095,10 @@ input.whats-input[type=text]:focus {
     color: var(--dark);
     margin: 1rem 2rem;
   }
+  .service {
+    background-size: cover, cover;
+    background-position-x: center;
+  }
 }
 
 
@@ -1132,12 +1131,8 @@ input.whats-input[type=text]:focus {
     flex-direction: column;
   }
   .llanerito-info {
-    flex-direction: column;
     text-align: center;
     align-content: center;
-  }
-  .service {
-    background-size: cover;
   }
 }
 

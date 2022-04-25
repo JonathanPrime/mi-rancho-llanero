@@ -20,6 +20,7 @@
 :root{
   --black: #1E1E1E;
   --white:   #fff;
+  --gray: #aaa;
   --wood-1: #602112;
   --wood-2: #491C0C;
   --meat-1: #5F1812;
@@ -196,16 +197,34 @@ p {
 .home .content p {
   font-size: 5rem;
   line-height: 2;
-  color: #aaa;
+  color: var(--white);
   padding: 2rem 0;
   font-family: 'BarleyScriptTextured' !important;
 }
 
 .service {
-  background-color:  var(--meat-1);
-  background-size: cover;
-  background-position: center;
+  background: url(../images/resource-tights.svg), var(--meat-2);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
   padding-top: 5rem;
+}
+
+.btn-llanerito {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  color:  var(--white);
+  border: 0.2rem solid rgba(255, 255, 255);
+  background: no-repeat;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+}
+
+.btn-llanerito:hover {
+  color: var(--white);
+  background:  var(--wood-2);
 }
 
 .service-box {
@@ -306,11 +325,16 @@ p {
   margin-top: 1rem !important;
 }
 
-.menu__detail, .menu__preci {
+.menu__preci {
   font-size: 2rem !important;
   color:  var(--white) !important;
   margin-top: 1rem !important;
-  padding-bottom: 2rem;
+}
+
+.menu__detail {
+  font-size: 1.5rem !important;
+  color:  var(--white) !important;
+  margin-top: 1rem !important;
 }
 
 .card-body {
@@ -393,6 +417,10 @@ p {
 }
 
 .about {
+  background-image: url(../images/resource-guitar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 42vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,14 +495,73 @@ p {
 
 .about .content .icons h3 i {
   padding-right: .5rem;
+  color:  var(--sunset-3);
+}
+
+.llanerito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.llanerito .image {
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+
+.llanerito .image img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.llanerito .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+
+.llanerito .content p {
+  font-size: 2.3rem;
+  line-height: 2;
+  color: var(--wood-2);
+  padding: 2rem 0;
+}
+
+.llanerito .content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.llanerito .content .icons h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color:  var(--white);
+}
+
+.llanerito .content .icons h3 i {
+  padding-right: .5rem;
   color:  var(--tertiary);
 }
 
 .reviews {
- /*  background: url(../images/icon-white.svg), var(--wood-2), no-repeat; */
- background-color:  var(--wood-2);
-  /* background-size: cover;
-  background-position: center; */
+  background: url(../images/resource-maracas.svg), var(--wood-2);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+  background-position-y: center;
 }
 
 .heading .reviews-title {
@@ -687,33 +774,72 @@ p {
 }
 
 .footer {
-  text-align: center;
+  background: url(../images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 3rem 9% !important;
 }
 
-.footer .links a {
-  margin: 1rem;
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2rem;
+  
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #ccc;
+  padding: .5rem 0;
+  display: block;
+}
+
+.footer .box-container .box a i {
+  padding-right: .5rem;
+  color: var(--sunset-2);
+}
+
+.footer .box-container .box a:hover {
+  color: var(--sunset-2);
+}
+
+.footer .box-container .box p {
+  font-size: 1.8rem;
+  line-height: 2;
+  color: #ccc;
+}
+
+.footer .box-container .box .email {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  margin: 1rem 0;
 }
 
 .footer .credit {
+  text-align: center;
   font-size: 2rem;
-  line-height: 2;
-  color: #aaa;
-  padding-top: 2rem;
+  
+  color: var(--white);
+  padding: 0 1rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
 }
 
 .footer .credit span {
-  color:  var(--tertiary);
-}
-
-.subscribe {
-  font-size: 2rem;
-  padding: 2rem;
-}
-
-.text-footer {
-  font-size: 1.8rem;
-  line-height: 2;
-  color: #aaa;
+  color: var(--quinary);
 }
 
 a:link { text-decoration: none }
@@ -1002,14 +1128,34 @@ input.whats-input[type=text]:focus {
     text-align: center;
     align-content: center;
   }
+  .llanerito {
+    flex-direction: column;
+  }
+  .llanerito-info {
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
-  /* .logo {
-    width: 35%;
-  } */
+  .heading .reviews-title {
+    font-size: 4rem;
+  }
+  .service-box .box .title-services {
+    font-size: 4rem;
+  }
+  .service-box .box .sub-services {
+    font-size: 9rem;
+  }
+  .heading .blog-title {
+    font-size: 5rem;
+  }
+  .about .content .title {
+    font-size: 3.7rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

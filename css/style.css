@@ -203,9 +203,9 @@ p {
 }
 
 .service {
-  background: url(../images/resource-tights.png), url(../images/background-meat.jpg);
-  background-size: contain, cover;
-  background-repeat: no-repeat, no-repeat;
+  background: url(../images/resource-tights.png), var(--meat-2);
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 5rem;
 }
 
@@ -556,9 +556,9 @@ p {
 }
 
 .reviews {
-  background: url(../images/resource-maracas.png), url(../images/background-wood.jpg);;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
+  background: url(../images/resource-maracas.png), var(--wood-2);
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position-x: right;
   background-position-y: center;
 }
@@ -1096,7 +1096,7 @@ input.whats-input[type=text]:focus {
     margin: 1rem 2rem;
   }
   .service {
-    background-size: cover, cover;
+    background-size: cover;
     background-position-x: center;
   }
 }

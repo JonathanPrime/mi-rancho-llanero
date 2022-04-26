@@ -168,7 +168,6 @@ p {
   background: url(../images/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
   padding-top: 5rem;
   display: flex;
   align-content: center;
@@ -185,7 +184,7 @@ p {
 .home .content img {
   width: 100%;
   margin-top: 20rem;
-  margin-bottom: 20rem;
+  margin-bottom: 15rem;
 }
 
 .home .content h3 {
@@ -263,14 +262,14 @@ p {
   font-size: 12rem;
   margin-bottom: 4rem;
   margin-top: 2rem;
-  color:  var(--sunset-3);
+  color:  var(--sunset-2);
 }
 
 .service-box .box .sub-services {
   padding: 1rem 0;
   margin-top: -8rem;
   font-size: 11rem;
-  color:  var(--sunset-3);
+  color:  var(--sunset-2);
   font-family: 'BarleyScriptTextured';
 }
 
@@ -404,8 +403,8 @@ p {
 }
 .owl-theme .owl-nav [class*=owl-] {
   color: #ffffff;
-  font-size: 39px;
-  background: #000000;
+  background-color: rgba(80,70,70,49%);
+  font-size: 30px;
   border-radius: 3px;
 }
 .owl-carousel .prev-carousel:hover {
@@ -1134,6 +1133,12 @@ input.whats-input[type=text]:focus {
     text-align: center;
     align-content: center;
   }
+  .home .content p {
+    font-size: 3rem;
+  }
+  .logo-desing {
+    width: 25%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1154,6 +1159,12 @@ input.whats-input[type=text]:focus {
   }
   .about .content .title {
     font-size: 3.7rem;
+  }
+  .home .content p {
+    font-size: 2.5rem;
+  }
+  .logo-desing {
+    width: 20%;
   }
 }
 /*# sourceMappingURL=style.css.map */

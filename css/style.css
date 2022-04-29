@@ -1112,22 +1112,34 @@ input.whats-input[type=text]:focus {
   html {
     font-size: 55%;
   }
+  .about {
+    flex-direction: column;
+  }
+  .llanerito {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
   .home .content h3 {
     font-size: 2.5rem;
   }
-  .about {
-    flex-direction: column;
+  .img-group {
+    flex-direction: column-reverse;
+  }
+  .img-group-1 {
+    margin-top: 23px;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .bottom-right {
+    margin-bottom: 23px;
   }
   .about-info {
     flex-direction: column;
     text-align: center;
     align-content: center;
-  }
-  .llanerito {
-    flex-direction: column;
   }
   .llanerito-info {
     text-align: center;

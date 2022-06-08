@@ -668,22 +668,28 @@ p {
   color: var(--black);
 }
 
-.blogs {
-  background-color: var(--black);
-}
-
 .heading .blog-title {
   text-align: center;
-  font-family: 'HeinbergTextured';
+  font-family: 'BebasNeueProBold';
   font-size: 6rem;
-  color:  var(--white);
+  color:  var(--black);
+}
+
+.thumbnails:hover img {
+  opacity: 0.6;
+  transform: scale(0.92);
+}
+
+.thumbnails:hover img:hover {
+  opacity: 1;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 .blogs .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  -ms-grid-columns: (minmax(30%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 2rem;
 }
 
@@ -702,7 +708,7 @@ p {
 }
 
 .blogs .box-container .box .image {
-  height: 66rem;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -763,9 +769,10 @@ p {
 .blogs .box-container .box .content p {
   font-size: 2rem;
   line-height: 2;
-  color: #aaa;
+  color: var(--gray);
   padding: 1.5rem 0;
 }
+/* BLOG */
 
 .footer {
   background: url(../images/footer.jpg);
@@ -1059,6 +1066,16 @@ input.whats-input[type=text]:focus {
 }
 
 @media (max-width: 768px) {
+  .blogs .box-container .box .image {
+    height: 100%;
+  }
+  .blogs .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    gap: 2rem;
+  }
   .header {
     padding: 2rem;
   }
@@ -1124,7 +1141,7 @@ input.whats-input[type=text]:focus {
   .home .content h3 {
     font-size: 2.5rem;
   }
-  .img-group {
+  .about .content .img-group {
     flex-direction: column-reverse;
   }
   .img-group-1 {

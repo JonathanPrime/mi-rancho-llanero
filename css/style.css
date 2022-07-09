@@ -324,6 +324,9 @@ label {
 /*========== MENU ==========*/
 
 .menu {
+  background: url(../images/background-menu.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 2rem 9% !important;
 }
 .menu__container{

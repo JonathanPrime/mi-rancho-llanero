@@ -50,6 +50,15 @@ html {
   scroll-padding-top: 8rem;
 }
 
+button, input {
+  border: 1px solid var(--sunset-1) !important;
+}
+
+.btn-primary {
+  background-color: var(--sunset-2) !important;
+  border-color: var(--sunset-2) !important;
+}
+
 html::-webkit-scrollbar {
   width: 1rem;
 }
@@ -76,6 +85,7 @@ section {
   text-align: center;
   font-family: 'BarleyScriptTextured';
   font-size: 12rem;
+  line-height: 50px;
   color:  var(--sunset-3);
 }
 
@@ -83,7 +93,6 @@ section {
   text-align: center;
   font-family: 'HeinbergTextured';
   font-size: 6rem;
-  margin-top: -3rem;
   color:  var(--wood-2);
 }
 
@@ -92,16 +101,38 @@ p {
   font-style: normal;
 }
 
+label {
+  font-size: 12px !important;
+  margin-top: .5rem !important;
+}
+
+.name, .tel, .dir {
+  font-size: 14px !important;
+}
+
+.table td, .table th{
+  font-size: 12px !important;
+}
+
 .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  cursor: pointer;
-  color:  var(--wood-2);
-  border: 0.2rem solid rgba(73, 28, 18);
-  background: no-repeat;
-  font-size: 1.7rem;
-  border-radius: 1rem;
-  padding: 1rem 3rem;
+  display: inline-block !important;
+  margin-top: 1rem !important;
+  cursor: pointer !important;
+  font-size: 1rem;
+  border-radius: 1rem !important;
+  padding: 1rem 3rem !important;
+}
+
+.btn-contact {
+  display: inline-block !important;
+  margin-top: 1rem !important;
+  cursor: pointer !important;
+  color:  var(--wood-2) !important;
+  border: 0.2rem solid rgba(73, 28, 18) !important;
+  background: no-repeat !important;
+  font-size: 1.7rem !important;
+  border-radius: 1rem !important;
+  padding: 1rem 3rem !important;
 }
 
 .btn:hover {
@@ -137,8 +168,18 @@ p {
   font-weight: bolder;
 }
 
+.shop {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--palet-3);
+}
+
+.shop:hover {
+  color: var(--black);
+}
+
 .logo-desing {
-  width: 12%;
+  width: 8%;
   height: auto;
 }
 
@@ -316,11 +357,23 @@ p {
   margin-bottom: 1rem;
 }
 
+.details {
+  justify-content: center;
+  margin: 1rem;
+}
+
 .menu__name {
   font-size: 3.2rem !important;
   text-transform: uppercase !important;
   color:  var(--white) !important;
   margin-top: 1rem !important;
+}
+
+.text-price {
+  background-color: var(--palet-3);
+  color: var(--black) !important;
+  font-weight: bolder;
+  border-radius: 2rem;
 }
 
 .menu__preci {
@@ -354,12 +407,18 @@ p {
   border-radius: .5rem 0 .5rem 0;
 }
 
+
 .filter {
   text-align:center;
   padding-bottom: 2rem;
 }
 
-#customers-testimonials .item {
+#customers-testimonials .item, 
+#customers-testimonials-alm .item, 
+#customers-testimonials-beb .item,
+#customers-testimonials-pll .item, 
+#customers-testimonials-pai .item,
+#customers-testimonials-chi .item {
   text-align: center;
   padding: 1.5rem;
   padding-top: 2rem;
@@ -371,11 +430,17 @@ p {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#customers-testimonials .owl-item.active.center .item {
+#customers-testimonials .owl-item.active.center .item,
+#customers-testimonials-alm .owl-item.active.center .item,
+#customers-testimonials-beb .owl-item.active.center .item,
+#customers-testimonials-pll .owl-item.active.center .item,
+#customers-testimonials-pai .owl-item.active.center .item,
+#customers-testimonials-chi .owl-item.active.center .item {
   opacity: 1;
   -webkit-transform: scale3d(1.0, 1.0, 1);
   transform: scale3d(1.0, 1.0, 1);
 }
+
 .owl-carousel .owl-item img {
   transform-style: preserve-3d;
   max-width: 220px;
@@ -395,14 +460,14 @@ p {
   opacity: 0.25;
 }
 .owl-carousel .owl-prev {
-  right: 20px;
+  left: -20px;
   
 }
 .owl-carousel .owl-next {
-  left: 20px;
+  right: -20px;
 }
 .owl-theme .owl-nav [class*=owl-] {
-  color: #ffffff;
+  color: var(--white);
   background-color: rgba(80,70,70,49%);
   font-size: 30px;
   border-radius: 3px;
@@ -463,6 +528,7 @@ p {
 .about .content p {
   font-size: 1.5rem;
   line-height: 2;
+  font-weight: bold;
   color: var(--wood-2);
   padding: 2rem 0;
 }
@@ -1166,7 +1232,7 @@ input.whats-input[type=text]:focus {
     font-size: 3rem;
   }
   .logo-desing {
-    width: 25%;
+    width: 15%;
   }
 }
 
